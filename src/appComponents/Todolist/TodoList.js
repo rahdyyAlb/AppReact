@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { todolist } from './Data';
 import ViewTasks from './ViewTasks';
 import AddTask from './AddTask';
-import './App.css';
+import DeleteTask from './DeleteTask'; // Importez le composant DeleteTask depuis son fichier correspondant
+import './TodoList.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
 let nextId = 12;
@@ -12,7 +13,10 @@ const TodoList = () => {
     const [editingTask, setEditingTask] = useState(null);
 
     const handleDelete = id => {
-        setTasks(tasks.filter(task => task.id !== id));
+        const confirmation = window.confirm("Voulez-vous vraiment supprimer cette tâche?");
+        if (confirmation) {
+            setTasks(tasks.filter(task => task.id !== id));
+        }
     };
 
     const handleAdd = (name, status) => {
@@ -41,6 +45,7 @@ const TodoList = () => {
             </div>
             <ViewTasks tasks={tasks} onDelete={handleDelete} onEdit={handleEdit} />
             <AddTask onAdd={handleAdd} />
+
         </div>
     );
 };
