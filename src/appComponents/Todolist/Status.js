@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Status = ({ status }) => {
+const Status = ({status}) => {
     let statusClass = '';
 
     switch (status) {

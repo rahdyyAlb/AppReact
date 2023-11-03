@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import Status from './Status';
 
-const EditTask = ({ taskId, initialName, initialStatus, onSave }) => {
+const EditTask = ({taskId, initialName, initialStatus, onSave}) => {
     const [name, setName] = useState(initialName);
     const [status, setStatus] = useState(initialStatus);
 
@@ -25,7 +25,7 @@ const EditTask = ({ taskId, initialName, initialStatus, onSave }) => {
             <button className="btn btn-primary mt-2" onClick={handleSave}>
                 Enregistrer
             </button>
-            <Status status={status} />
+            <Status status={status}/>
         </div>
     );
 };

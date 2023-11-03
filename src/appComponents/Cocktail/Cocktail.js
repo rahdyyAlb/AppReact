@@ -1,19 +1,19 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Home from './Home'
-import CocktailDetail from './CocktailDetail';
-import '../../App.css';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import HomeViews from "./HomeViews";
+import CategoryPageViews from "./CategoryPageViews";
+import CocktailDetailViews from "./CocktailDetailViews";
+
 
 function Cocktail() {
     return (
-        <div className="mt-5">
-            <Router>
-                <Switch>
-                    <Route path="/cocktail" exact component={Home} />
-                    <Route path="/cocktail/:id" component={CocktailDetail} />
-                </Switch>
-            </Router>
-        </div>
+        <Router>
+            <Switch>
+                <Route path="/cocktail" exact component={HomeViews}/>
+                <Route path="/cocktail/category/:category" component={CategoryPageViews}/>
+                <Route path="/cocktail/:id" component={CocktailDetailViews}/>
+            </Switch>
+        </Router>
     );
 }
 

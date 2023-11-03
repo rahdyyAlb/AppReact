@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { todolist } from './Data';
+import React, {useState} from 'react';
+import {todolist} from './Data';
 import ViewTasks from './ViewTasks';
 import AddTask from './AddTask';
 import './TodoList.css';
@@ -21,12 +21,12 @@ const TodoList = () => {
     const handleAdd = (name, status) => {
         setTasks([
             ...tasks,
-            { id: nextId++, name: name, status: status }
+            {id: nextId++, name: name, status: status}
         ]);
     };
 
     const handleEdit = (taskId, newName, newStatus) => {
-        setTasks(tasks.map(task => (task.id === taskId ? { ...task, name: newName, status: newStatus } : task)));
+        setTasks(tasks.map(task => (task.id === taskId ? {...task, name: newName, status: newStatus} : task)));
         setEditingTask(null);
     };
 
@@ -42,8 +42,8 @@ const TodoList = () => {
                 <p>Organisez votre journée plus efficacement que jamais !</p>
                 <p>Commencez dès maintenant et restez productif ! 🚀</p>
             </div>
-            <ViewTasks tasks={tasks} onDelete={handleDelete} onEdit={handleEdit} />
-            <AddTask onAdd={handleAdd} />
+            <ViewTasks tasks={tasks} onDelete={handleDelete} onEdit={handleEdit}/>
+            <AddTask onAdd={handleAdd}/>
 
         </div>
     );

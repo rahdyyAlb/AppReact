@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect} from 'react';
 import WeatherCard from './WeatherCard';
-import { format } from 'date-fns';
+import {format} from 'date-fns';
 import frLocale from 'date-fns/locale/fr';
 
-const Views = ({ forecastData, currentIndex, selectedCity }) => {
+const Views = ({forecastData, currentIndex, selectedCity}) => {
     const [cardOpen, setCardOpen] = useState([]);
 
     useEffect(() => {
@@ -19,7 +19,7 @@ const Views = ({ forecastData, currentIndex, selectedCity }) => {
     }
 
     const currentDate = new Date();
-    const formattedDate = format(currentDate, 'EEEE d MMMM yyyy', { locale: frLocale });
+    const formattedDate = format(currentDate, 'EEEE d MMMM yyyy', {locale: frLocale});
     const dateToday = formattedDate.charAt(0).toUpperCase() + formattedDate.slice(1);
 
     const currentWeather = forecastData.current;
@@ -68,7 +68,8 @@ const Views = ({ forecastData, currentIndex, selectedCity }) => {
                     <div className="col-md-10 col-lg-8 col-xl-6">
                         <div className="card text-white">
                             <div className="bg-image">
-                                <img className="card-img" src={weatherIcon} alt={`Icone météo pour ${currentWeather.weather[0].description}`} />
+                                <img className="card-img" src={weatherIcon}
+                                     alt={`Icone météo pour ${currentWeather.weather[0].description}`}/>
                                 <div className="mask"></div>
                             </div>
                             <div className="card-img-overlay text-dark p-5">
@@ -77,13 +78,17 @@ const Views = ({ forecastData, currentIndex, selectedCity }) => {
                                     <div>
                                         <h4 className="mb-0">{selectedCity} </h4>
                                         <p className="display-2 my-3">{currentWeather.main.temp}°C</p>
-                                        <p className="mb-2">Ressenti <strong>{currentWeather.main.feels_like}°C</strong></p>
-                                        <p className="mb-2">Humidité <strong>{currentWeather.main.humidity}%</strong></p>
+                                        <p className="mb-2">Ressenti <strong>{currentWeather.main.feels_like}°C</strong>
+                                        </p>
+                                        <p className="mb-2">Humidité <strong>{currentWeather.main.humidity}%</strong>
+                                        </p>
                                         <h5>{currentWeather.weather[0].description}</h5>
                                         <h5>{currentWeather.weather[0].main}</h5>
                                     </div>
                                     <div>
-                                        <img src={`https://openweathermap.org/img/wn/${currentWeather.weather[0].icon}@4x.png`} alt=""/>
+                                        <img
+                                            src={`https://openweathermap.org/img/wn/${currentWeather.weather[0].icon}@4x.png`}
+                                            alt=""/>
                                     </div>
                                 </div>
                             </div>

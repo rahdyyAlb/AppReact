@@ -1,6 +1,6 @@
 import React from 'react';
 
-const DeleteTask = ({ taskId, onDelete }) => {
+const DeleteTask = ({taskId, onDelete}) => {
     const handleDelete = () => {
         const confirmation = window.confirm("Voulez-vous vraiment supprimer cette tâche?");
         if (confirmation) {

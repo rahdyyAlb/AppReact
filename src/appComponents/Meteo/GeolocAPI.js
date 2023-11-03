@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {useEffect, useState} from "react";
 import axios from "axios";
 
 const GeolocAPI = () => {
@@ -41,7 +41,7 @@ const GeolocAPI = () => {
         throw new Error("Erreur de géolocalisation : " + error.message);
     }
 
-    return { nomVille, latitude, longitude };
+    return {nomVille, latitude, longitude};
 };
 
 export default GeolocAPI;

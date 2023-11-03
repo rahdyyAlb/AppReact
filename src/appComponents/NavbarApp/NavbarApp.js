@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 
-const NavbarApp = ({ apps }) => {
+const NavbarApp = ({apps}) => {
     const [menuOpen, setMenuOpen] = useState(false);
 
     const handleMenuToggle = () => {

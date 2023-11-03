@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import EditTask from './EditTask';
 import Status from './Status';
 
-const ViewTasks = ({ tasks, onDelete, onEdit }) => {
+const ViewTasks = ({tasks, onDelete, onEdit}) => {
     const [editingTask, setEditingTask] = useState(null);
 
     const handleEdit = (taskId, newName, newStatus) => {
@@ -11,10 +11,10 @@ const ViewTasks = ({ tasks, onDelete, onEdit }) => {
     };
 
 
-
     return (
         <div className="d-flex justify-content-center mt-4">
-            <table className="table table-striped table-bordered rounded-3 border-dark table-hover table-sm align-middle w-50">
+            <table
+                className="table table-striped table-bordered rounded-3 border-dark table-hover table-sm align-middle w-50">
                 <thead className='text-center'>
                 <tr>
                     <th scope="col">#</th>
@@ -38,7 +38,7 @@ const ViewTasks = ({ tasks, onDelete, onEdit }) => {
                                 task.name
                             )}
                         </td>
-                        <Status status={task.status} />
+                        <Status status={task.status}/>
                         <td className="d-flex justify-content-around">
                             <button
                                 type="button"

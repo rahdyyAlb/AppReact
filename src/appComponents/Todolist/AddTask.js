@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 
-const AddTask = ({ onAdd }) => {
+const AddTask = ({onAdd}) => {
     const [name, setName] = useState('');
     const defaultStatus = 'En Attente';
 
