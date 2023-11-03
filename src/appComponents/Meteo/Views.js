@@ -64,11 +64,11 @@ const Views = ({forecastData, currentIndex, selectedCity}) => {
     return (
         <section key={currentIndex}>
             <div className="container py-5 h-100">
-                <div className="d-flex justify-content-between align-items-start h-100">
+                <div className="d-flex méteo justify-content-between align-items-start h-100">
                     <div className="col-md-10 col-lg-8 col-xl-6">
-                        <div className="card text-white">
-                            <div className="bg-image">
-                                <img className="card-img" src={weatherIcon}
+                        <div className="card text-white meteo-day">
+                            <div className="bg-image meteo-day">
+                                <img className="card-img meteo-day" src={weatherIcon}
                                      alt={`Icone météo pour ${currentWeather.weather[0].description}`}/>
                                 <div className="mask"></div>
                             </div>
@@ -94,7 +94,7 @@ const Views = ({forecastData, currentIndex, selectedCity}) => {
                             </div>
                         </div>
                     </div>
-                    <div className="list-group">
+                    <div className="list-group list-meteo">
                         {futureWeather && (
                             <h5 className="mb-4">Prévisions météo pour les 5 prochains jours</h5>
                         )}

@@ -28,6 +28,26 @@ const Home = () => {
                                 gestion de votre emploi du temps quotidien.
                             </p>
                         </li>
+                        <li>
+                            <h3>Météo App :</h3>
+                            <p>
+                                Restez informé sur les conditions météorologiques en temps réel avec notre application météo conviviale.
+                                Obtenez des prévisions précises, vérifiez la température actuelle, les précipitations, et les prévisions à venir
+                                pour votre emplacement ou n'importe quelle autre ville dans le monde. Soyez prêt pour chaque journée avec notre
+                                application météo simple et facile à utiliser.
+                            </p>
+                        </li>
+                        <li>
+                            <h3>Cocktail Explorer :</h3>
+                            <p>
+                                Plongez dans le monde des cocktails avec notre application Cocktail Explorer. Découvrez une variété infinie de
+                                recettes, des classiques intemporels aux créations modernes. Apprenez à mélanger, agiter et servir des boissons
+                                exquises pour impressionner vos amis. Explorez les ingrédients, les techniques et les histoires derrière chaque
+                                cocktail. Que vous soyez un amateur ou un barman professionnel, cette application vous guidera à travers le
+                                monde coloré des cocktails.
+                            </p>
+                        </li>
+
                     </ol>
                 </section>
             </div>
