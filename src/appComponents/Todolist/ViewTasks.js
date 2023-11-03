@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
 import EditTask from './EditTask';
 import Status from './Status';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrashAlt, faEdit } from '@fortawesome/free-solid-svg-icons';
 const ViewTasks = ({tasks, onDelete, onEdit}) => {
     const [editingTask, setEditingTask] = useState(null);
 
@@ -45,14 +46,14 @@ const ViewTasks = ({tasks, onDelete, onEdit}) => {
                                 className="btn btn-danger"
                                 onClick={() => onDelete(task.id)}
                             >
-                                Supprimer
+                                <FontAwesomeIcon icon={faTrashAlt} />
                             </button>
                             <button
                                 type="button"
                                 className="btn btn-primary"
                                 onClick={() => setEditingTask(task.id)}
                             >
-                                Modifier
+                                <FontAwesomeIcon icon={faEdit} />
                             </button>
                         </td>
                     </tr>
