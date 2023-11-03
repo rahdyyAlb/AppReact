@@ -37,23 +37,22 @@ const Home = () => {
             <div className=' d-flex flex-wrap mt-4 mb-4'>
                 {cocktailData[currentPage].map(cocktail => (
                     <div className='card mt-2 me-2 cocktail-item card-cocktail' key={cocktail.idDrink}>
-                        <img className="card-img-top" src={cocktail.strDrinkThumb} alt="Card image cap"></img>
+                        <img className="card-img-top img-fluid" src={cocktail.strDrinkThumb} alt="Card image cap"></img>
                         <div className="card-body">
                             <h5 className="card-title"><strong>{cocktail.strDrink}</strong></h5>
                             <p className="card-text">Category: <strong>{cocktail.strCategory}</strong></p>
                             <p className="card-text">Alcoholic: <strong>{cocktail.strAlcoholic}</strong></p>
-
                             <a className='btn btn-info' href={`/cocktail/${cocktail.idDrink}`}> voir detail</a>
 
                         </div>
                     </div>
                 ))}
             </div>
-            <div className='pagination'>
+            <div className='pagination mt-4 d-flex flex-wrap justify-content-center'>
                 {alphabet.split('').map(letter => (
                     <button
                         key={letter}
-                        className={`pagination-button ${currentPage === letter ? 'active' : ''}`}
+                        className={`rounded-circle btn btn-secondary ${currentPage === letter ? 'active' : ''}`}
                         onClick={() => handlePageChange(letter)}
                     >
                         {letter.toUpperCase()}

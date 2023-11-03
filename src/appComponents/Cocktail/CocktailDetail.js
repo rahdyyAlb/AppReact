@@ -22,7 +22,7 @@ const CocktailDetail = () => {
     if (!cocktail) {
         return (
             <div className='d-flex justify-content-center w-100'>
-                <img src="/Loading.gif" alt="chargement"/>
+                <img src="/Loading.gif" alt="chargement" className="img-fluid"/>
             </div>
         )
     }
@@ -32,7 +32,7 @@ const CocktailDetail = () => {
             <p>Je vous présent le <strong>{cocktail.strDrink}</strong></p>
             <div className="d-flex justify-content-center ">
                 <div className='card mt-2 me-2 cocktail-item w-50' key={cocktail.idDrink}>
-                    <img className="card-img-top" src={cocktail.strDrinkThumb} alt=""/>
+                    <img className="card-img-top img-fluid" src={cocktail.strDrinkThumb} alt=""/>
                     <div className="card-body">
                         <h5 className="card-title"><strong>{cocktail.strDrink}</strong></h5>
                         <p className="card-text">Category: <strong>{cocktail.strCategory}</strong></p>

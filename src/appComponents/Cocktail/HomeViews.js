@@ -8,9 +8,7 @@ function HomeViews() {
 
     return (
         <div className="mt-5">
-            <div className="d-flex">
-                <CategoryMenu/>
-            </div>
+            <CategoryMenu/>
             <Home/>
         </div>
     );

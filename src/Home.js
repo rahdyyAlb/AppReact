@@ -3,7 +3,7 @@ import './Home.css'; // Importe le style spécifique à la page d'accueil
 
 const Home = () => {
     return (
-        <div className="mt-3 w-75  d-flex justify-content-center">
+        <div className="mt-3  d-flex justify-content-center">
             <div>
                 <p>
                     Bienvenue sur mon portfolio d'applications, un espace où l'innovation et la créativité se

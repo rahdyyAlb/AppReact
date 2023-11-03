@@ -26,7 +26,7 @@ const CategoryMenu = () => {
 
         <div className="category-menu">
             <nav className="d-block align-items-start align-items-md-end flex-column flex-md-row">
-                <div className="mt-3 w-100 d-flex">
+                <div className="mt-3 w-100 d-flex justify-content-center">
                     <a href="/cocktail" className="btn"><h2>Acceuil</h2></a>
                     <a
                         className=" btn d-flex "
@@ -38,11 +38,6 @@ const CategoryMenu = () => {
                         onClick={handleMenuToggle}
                     >
                         <h2>Catégories de Cocktails </h2>
-                        <div><img
-                            className="Logo-menu ms-2 mt-2"
-                            src={CategoryMenu ? 'X.png' : 'Hamburger_icon.svg.png'}
-                            alt=""
-                        /></div>
                     </a>
                 </div>
                 <div className={`collapse w-100 ${CategoryMenu ? 'show' : ''}`} id="CategoryMenuCollapse">
