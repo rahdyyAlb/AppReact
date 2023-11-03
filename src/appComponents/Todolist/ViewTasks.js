@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import DeleteTask from './DeleteTask';
 import EditTask from './EditTask';
 import Status from './Status';
 

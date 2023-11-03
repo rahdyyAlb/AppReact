@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { todolist } from './Data';
 import ViewTasks from './ViewTasks';
 import AddTask from './AddTask';
-import DeleteTask from './DeleteTask'; // Importez le composant DeleteTask depuis son fichier correspondant
 import './TodoList.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
